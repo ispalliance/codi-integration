@@ -1,0 +1,18 @@
+{
+  "name": "ispalliance/codi-integration",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "ISP Alliance, a.s.",
+      "email": "developer@ispalliance.cz"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Ispa\\CodiLibs\\Constant\\": "src/"
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}
