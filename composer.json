@@ -1,6 +1,5 @@
 {
   "name": "ispalliance/codi-integration",
-  "type": "library",
   "license": "MIT",
   "authors": [
     {
@@ -14,6 +13,8 @@
       "Ispa\\CodiModule\\Entity\\": "src/Entities"
     }
   },
-  "prefer-stable": true,
-  "minimum-stability": "dev"
+  "require": {
+    "php": ">=5.6",
+    "ext-ctype": "*"
+  }
 }
