@@ -1,6 +1,6 @@
 <?php
 
-namespace Ispa\CodiLibs\Constant;
+namespace Ispa\Codi\Constant;
 
 
 final class RequestType

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ispa\CodiModule\Entity;
+namespace Ispa\Codi\Entity;
 
 
 class FromToEntity

@@ -1,29 +1,30 @@
 <?php
 
-namespace Ispa\CodiLibs\Constant;
+namespace Ispa\Codi\Constant;
 
 
 final class Technology
 {
 
-	//todo incomplete enum
 	const
-		XDSL = 'XDSL',
-		WIFI = 'WIFI',
-		FWA  = 'FWA',
-		CATV = 'CATV',
-		FTTH = 'FTTH',
-		FTTB = 'FTTB',
-		FTTC = 'FTTC';
+		WIFI              = 'wifi',
+		FWA_FREEBAND      = 'fwa_free',
+		FWA_LICENSED_BAND = 'fwa_licensed',
+		FTTB              = 'fttb',
+		FTTH_P2P          = 'ftth_p2p',
+		FTTH_XPON         = 'ftth_xpon',
+		XDSL              = 'xdsl',
+		OTHER             = 'other';
 
 	private static $NAMES = [
-		self::XDSL => "Pevný internet (XDSL)",
-		self::WIFI => "Bezdrátový internet (WIFI)",
-		self::FWA  => "Bezdrátový internet (FWA)",
-		self::CATV => "Pevný internet (CATV)",
-		self::FTTH => "Optický internet (FTTH)",
-		self::FTTB => "Optický internet (FTTB)",
-		self::FTTC => "Optický internet (FTTC)"
+		self::WIFI               => "WiFi",
+		self::FWA_FREEBAND       => "FWA freeband",
+		self::FWA_LICENSED_BAND  => "FWA licensed band",
+		self::FTTB               => "FTTB",
+		self::FTTH_P2P           => "FTTH P2P",
+		self::FTTH_XPON          => "FTTH xPON",
+		self::XDSL               => "xDSL",
+		self::OTHER              => "Other"
 	];
 
 

@@ -9,8 +9,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Ispa\\CodiLibs\\Constant\\": "src/Constants",
-      "Ispa\\CodiModule\\Entity\\": "src/Entities"
+      "Ispa\\Codi\\": "src/"
     }
   },
   "require": {
