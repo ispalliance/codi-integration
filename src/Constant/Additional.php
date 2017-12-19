@@ -6,14 +6,15 @@ namespace Ispa\Codi\Constant;
 final class Additional
 {
 
-	// todo incomplete enum
 	const
 		TV   = 'TV',
-		VOIP = 'VOIP';
+		VOIP = 'VOIP',
+		IPV6 = 'IPV6';
 
 	private static $NAMES = [
 		self::TV   => "Televize",
-		self::VOIP => "Voip"
+		self::VOIP => "Voip",
+		self::IPV6 => "ipv6"
 	];
 
 
