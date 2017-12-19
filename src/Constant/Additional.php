@@ -14,7 +14,7 @@ final class Additional
 	private static $NAMES = [
 		self::TV   => "Televize",
 		self::VOIP => "Voip",
-		self::IPV6 => "ipv6"
+		self::IPV6 => "Ipv6"
 	];
 
 
