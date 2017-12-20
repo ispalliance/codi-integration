@@ -3,14 +3,14 @@
 namespace Ispa\Codi\Entity;
 
 
-class FromToEntity
+class FromToEntity extends BaseEntity
 {
 
 	/** @var int|null */
-	public $from = null;
+	protected $from = null;
 
 	/** @var int|null */
-	public $to = null;
+	protected $to = null;
 
 
 	/**
@@ -18,9 +18,7 @@ class FromToEntity
 	 */
 	public function setFrom($from)
 	{
-		if (is_int($from)) {
-			$this->from = $from;
-		} elseif (ctype_digit($from) || is_float($from)) {
+		if (is_numeric($from)) {
 			$this->from = (int)$from;
 		}
 	}
@@ -31,10 +29,8 @@ class FromToEntity
 	 */
 	public function setTo($to)
 	{
-		if (is_int($to)) {
-			$this->to = $to;
-		} elseif (ctype_digit($to) || is_float($to)) {
-			$this->to = (int) $to;
+		if (is_numeric($to)) {
+			$this->to = (int)$to;
 		}
 	}
 

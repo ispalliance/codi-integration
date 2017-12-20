@@ -1,6 +1,6 @@
-# IDE
-.idea
-
-# Composer
-vendor
-composer.lock
+/.idea
+/vendor
+/composer.lock
+/tests/*.log
+/tests/tmp
+/tests/.coverage.xml

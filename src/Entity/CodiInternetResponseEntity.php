@@ -3,31 +3,31 @@
 namespace Ispa\Codi\Entity;
 
 
-class CodiInternetResponseEntity
+class CodiInternetResponseEntity extends BaseEntity
 {
 
 	/** @var string */
-	public $technology;
+	protected $technology;
 
-	/** @var FromToEntity */
-	public $speedUp;
+	/** @var \Ispa\Codi\Entity\FromToEntity */
+	protected $speedUp;
 
-	/** @var FromToEntity */
-	public $speedDown;
+	/** @var \Ispa\Codi\Entity\FromToEntity */
+	protected $speedDown;
 
-	/** @var FromToEntity */
-	public $price;
+	/** @var \Ispa\Codi\Entity\FromToEntity */
+	protected $price;
 
 	/** @var array */
-	public $additional = [];
+	protected $additional = [];
 
 	/** @var string|null */
-	public $webLink;
+	protected $webLink;
 
 	/** @var string|null */
-	public $orderLink;
+	protected $orderLink;
 
 	/** @var string|null */
-	public $promoText;
+	protected $promoText;
 
 }

@@ -3,13 +3,13 @@
 namespace Ispa\Codi\Entity;
 
 
-class CodiOpenAccessResponseEntity
+class CodiOpenAccessResponseEntity extends BaseEntity
 {
 
 	/** @var string */
-	public $technology;
+	protected $technology;
 
 	/** @var string|null */
-	public $note;
+	protected $note;
 
 }

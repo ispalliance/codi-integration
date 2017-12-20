@@ -7,13 +7,23 @@
       "email": "developer@ispalliance.cz"
     }
   ],
+  "require": {
+    "php": ">=5.6",
+    "nette/tester": "^2.0"
+  },
+  "require-dev": {
+  },
   "autoload": {
     "psr-4": {
       "Ispa\\Codi\\": "src/"
     }
   },
-  "require": {
-    "php": ">=5.6",
-    "ext-ctype": "*"
+  "scripts": {
+    "tester": [
+      "tester -s -C tests/cases"
+    ],
+    "coverage": [
+      "tester -s -C -d zend_extension=xdebug.so --coverage ./tests/.coverage.xml --coverage-src ./src tests/cases"
+    ]
   }
 }
