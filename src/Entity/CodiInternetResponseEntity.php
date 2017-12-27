@@ -2,12 +2,11 @@
 
 namespace Ispa\Codi\Entity;
 
+use Ispa\Codi\Constant\Additional;
 
-class CodiInternetResponseEntity extends BaseEntity
+
+class CodiInternetResponseEntity extends CodiResponseEntity
 {
-
-	/** @var string */
-	protected $technology;
 
 	/** @var \Ispa\Codi\Entity\FromToEntity */
 	protected $speedUp;
@@ -29,5 +28,23 @@ class CodiInternetResponseEntity extends BaseEntity
 
 	/** @var string|null */
 	protected $promoText;
+
+
+	/**
+	 * @param array $additional
+	 */
+	public function setAdditional(array $additional)
+	{
+		$additionalNames = Additional::getNames();
+		$forSet          = [];
+
+		foreach ($additional as $item) {
+			if (array_key_exists($item, $additionalNames)) {
+				$forSet[] = $item;
+			}
+		}
+
+		$this->additional = $forSet;
+	}
 
 }
