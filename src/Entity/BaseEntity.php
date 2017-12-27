@@ -20,7 +20,9 @@ abstract class BaseEntity implements \JsonSerializable
 			throw new \InvalidArgumentException("Property '$name' not exist");
 		}
 
-		$this->validate($name);
+		if (!$this->validate($name)) {
+			throw new \UnexpectedValueException("Entity validation Error, contain unexpected value");
+		}
 	}
 
 
@@ -48,7 +50,9 @@ abstract class BaseEntity implements \JsonSerializable
 		$array           = [];
 		$reflectionClass = new \ReflectionClass($this);
 		foreach ($reflectionClass->getProperties() as $property) {
-			$this->validate($property);
+			if (!$this->validate($property)) {
+				throw new \UnexpectedValueException("Entity validation Error, contain unexpected value");
+			}
 			$array[$property->getName()] = $this->{$property->getName()};
 		}
 
@@ -80,7 +84,6 @@ abstract class BaseEntity implements \JsonSerializable
 				return true;
 			} elseif (is_object($value)) {
 				foreach ($types as $type) {
-					//todo check type without /...
 					if(class_exists($type) && $value instanceof $type) {
 						return true;
 					}
@@ -94,8 +97,7 @@ abstract class BaseEntity implements \JsonSerializable
 				}
 			}
 		}
-
-		return true;
+		return false;
 	}
 
 }
