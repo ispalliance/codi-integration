@@ -5,7 +5,7 @@
 [![Licence](https://img.shields.io/packagist/l/ispalliance/codi-integration.svg?style=flat-square)](https://packagist.org/packages/ispalliance/codi-integration)
 [![Downloads this Month](https://img.shields.io/packagist/dm/ispalliance/codi-integration.svg?style=flat-square)](https://packagist.org/packages/ispalliance/codi-integration)
 [![Downloads total](https://img.shields.io/packagist/dt/ispalliance/codi-integration.svg?style=flat-square)](https://packagist.org/packages/ispalliance/codi-integration)
-[![Latest stable](https://img.shields.io/packagist/v/grape-fluid/configuration.svg?style=flat-square)](https://packagist.org/packages/ispalliance/codi-integration)
+[![Latest stable](https://img.shields.io/packagist/v/ispalliance/codi-integration.svg?style=flat-square)](https://packagist.org/packages/ispalliance/codi-integration)
 
 Základní entity, dokumentace, popis API a příklady k integraci platformy CODI do vašich systémů.
 
