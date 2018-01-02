@@ -3,6 +3,9 @@
 namespace Ispa\Codi\Entity;
 
 
+/**
+ * @property $note
+ */
 class CodiOpenAccessResponseEntity extends CodiResponseEntity
 {
 

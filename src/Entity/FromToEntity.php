@@ -2,7 +2,10 @@
 
 namespace Ispa\Codi\Entity;
 
-
+/**
+ * @property $from
+ * @property $to
+ */
 class FromToEntity extends BaseEntity
 {
 

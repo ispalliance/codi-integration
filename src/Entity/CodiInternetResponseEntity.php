@@ -5,6 +5,15 @@ namespace Ispa\Codi\Entity;
 use Ispa\Codi\Constant\Additional;
 
 
+/**
+ * @property $speedUp
+ * @property $speedDown
+ * @property $price
+ * @property $additional
+ * @property $webLink
+ * @property $orderLink
+ * @property $promoText
+ */
 class CodiInternetResponseEntity extends CodiResponseEntity
 {
 
