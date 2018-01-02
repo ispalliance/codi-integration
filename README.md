@@ -1,12 +1,18 @@
 # CODI integrace
-Základní dokumentace, popis API a příklady k integraci CODI do vašich systémů.
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/ispalliance/codi-integration.svg?style=flat-square)](https://packagist.org/packages/ispalliance/codi-integration)
+[![Build Status](https://img.shields.io/travis/ispalliance/codi-integration.svg?style=flat-square)](https://travis-ci.org/ispalliance/codi-integration)
+[![Code coverage](https://img.shields.io/coveralls/ispalliance/codi-integration.svg?style=flat-square)](https://coveralls.io/r/ispalliance/codi-integration)
+[![Licence](https://img.shields.io/packagist/l/ispalliance/codi-integration.svg?style=flat-square)](https://packagist.org/packages/ispalliance/codi-integration)
+[![Downloads this Month](https://img.shields.io/packagist/dm/ispalliance/codi-integration.svg?style=flat-square)](https://packagist.org/packages/ispalliance/codi-integration)
+[![Downloads total](https://img.shields.io/packagist/dt/ispalliance/codi-integration.svg?style=flat-square)](https://packagist.org/packages/ispalliance/codi-integration)
+[![Latest stable](https://img.shields.io/packagist/v/grape-fluid/configuration.svg?style=flat-square)](https://packagist.org/packages/ispalliance/codi-integration)
+
+Základní entity, dokumentace, popis API a příklady k integraci platformy CODI do vašich systémů.
 
 ## Instalace
 ```
 composer require ispalliance/codi-integration
 ```
-
-Obsahuje pomocné třídy pro integraci s platformou CODI.
 
 ## Volání
 
@@ -25,7 +31,7 @@ https://domain.tld/internet.php?ruian=9268979
 ```
 
 ## Odpověď
-Odpověď je očekávána jako json, který obsahuje status a data. Data obsahují pole entit, nalezených dle ruianu.  Kódování je UTF-8.
+Odpověď je očekávána jako json, který obsahuje status a data. Data obsahují pole entit, nalezených dle ruianu. Použité kódování je UTF-8.
 ```json
 {
   "status":"success",
@@ -73,20 +79,32 @@ objekt FromToEntity:
 #### Příklad json entity:
 ```json
 {
- "technology":"fwa_licensed",
- "speedUp":{"from":10,"to":20},
- "speedDown":{"from":20,"to":40},
- "price":{"from":189,"to":799},
- "additional":["TV","VOIP"],
- "webLink":"http://www.ispalliance.cz",
- "orderLink":"http://ispalliance.cz/order",
- "promoText":"Akční nabídka."
+  "technology":"fwa_licensed",
+  "speedUp":{
+    "from":10,
+    "to":20
+  },
+  "speedDown":{
+    "from":20,
+    "to":40
+  },
+  "price":{
+    "from":189,
+    "to":799
+  },
+  "additional":["TV","VOIP"],
+  "webLink":"http://www.ispalliance.cz",
+  "orderLink":"http://ispalliance.cz/order",
+  "promoText":"Akční nabídka."
 }
 ```
 
 #### Příklad odpovědi bez technologie:
 ```json
-{"status":"success","data":[]}
+{
+  "status":"success",
+  "data":[]
+}
 ```
 
 #### Příklad minimální odpovědi, která vrací jen technologii:
@@ -96,9 +114,18 @@ objekt FromToEntity:
  "data":[
    {
      "technology":"fwa_licensed",
-     "speedUp":{"from":null,"to":null},
-     "speedDown":{"from":null,"to":null},
-     "price":{"from":null,"to":null},
+     "speedUp":{
+       "from":null,
+       "to":null
+     },
+     "speedDown":{
+       "from":null,
+       "to":null
+     },
+     "price":{
+       "from":null,
+       "to":null
+     },
      "additional":[],
      "webLink":null,
      "promoText":null
@@ -114,9 +141,18 @@ objekt FromToEntity:
  "data":[
    {
      "technology":"fwa_licensed",
-     "speedUp":{"from":10,"to":20},
-     "speedDown":{"from":20,"to":40},
-     "price":{"from":189,"to":799},
+     "speedUp":{
+       "from":10,
+       "to":20
+     },
+     "speedDown":{
+       "from":20,
+       "to":40
+     },
+     "price":{
+       "from":189,
+       "to":799
+     },
      "additional":["TV","VOIP"],
      "webLink":"http://www.ispalliance.cz",
      "orderLink":"http://ispalliance.cz/order",
@@ -124,9 +160,18 @@ objekt FromToEntity:
    },
    {
      "technology":"xdsl",
-     "speedUp":{"from":10,"to":30},
-     "speedDown":{"from":20,"to":60},
-     "price":{"from":399,"to":1999},
+     "speedUp":{
+       "from":10,
+       "to":30
+     },
+     "speedDown":{
+       "from":20,
+       "to":60
+     },
+     "price":{
+       "from":399,
+       "to":1999
+     },
      "additional":[],
      "webLink":"http://www.ispalliance.cz",
      "orderLink":"http://ispalliance.cz/order",
@@ -153,14 +198,17 @@ note - string
 #### Příklad json entity:
 ```json
 {
- "technology":"fwa_licensed",
- "note":"Poznámka"
+  "technology":"fwa_licensed",
+  "note":"Poznámka"
 }
 ```
 
 #### Příklad odpovědi bez technologie:
 ```json
-{"status":"success","data":[]}
+{
+  "status":"success",
+  "data":[]
+}
 ```
 
 #### Příklad minimální odpovědi, která vrací jen technologii:
