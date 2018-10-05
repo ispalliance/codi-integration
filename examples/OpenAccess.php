@@ -5,6 +5,7 @@ require '../src/Entity/CodiResponseEntity.php';
 require '../src/Entity/CodiOpenAccessResponseEntity.php';
 require '../src/Constant/Technology.php';
 
+use Ispa\Codi\Constant\PriceLevel;
 use Ispa\Codi\Constant\Technology;
 use Ispa\Codi\Entity\CodiOpenAccessResponseEntity;
 
@@ -32,6 +33,9 @@ $ruian  = htmlspecialchars($_GET['id']);
 $entity = new CodiOpenAccessResponseEntity();
 
 $entity->setTechnology(Technology::WIFI);
-$entity->note = 'Poznámka';
+$entity->note       = 'Poznámka';
+$entity->priceLevel = PriceLevel::A;
+$entity->speedDown  = 4096;
+$entity->speedUp    = 512;
 
 echo json_encode(["status" => "success","data" => [$entity]]);
