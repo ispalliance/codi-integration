@@ -17,13 +17,13 @@ use Ispa\Codi\Constant\Additional;
 class CodiInternetResponseEntity extends CodiResponseEntity
 {
 
-	/** @var FromToEntity */
+	/** @var \Ispa\Codi\Entity\FromToEntity */
 	protected $speedUp;
 
-	/** @var FromToEntity */
+	/** @var \Ispa\Codi\Entity\FromToEntity */
 	protected $speedDown;
 
-	/** @var FromToEntity */
+	/** @var \Ispa\Codi\Entity\FromToEntity */
 	protected $price;
 
 	/** @var array */
