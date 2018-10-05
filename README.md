@@ -192,6 +192,9 @@ Základní implementaci včetně HTTP Basic auth bez logiky získávání dat pr
 ```
 technology - string *
 note - string
+priceLevel - string
+speedDown - int
+speedUp - int
 ```
 \* povinné položky
 
@@ -199,7 +202,10 @@ note - string
 ```json
 {
   "technology":"fwa_licensed",
-  "note":"Poznámka"
+  "note":"Poznámka",
+  "priceLevel": "level_a",
+  "speedDown": 4096,
+  "speedUp": 512
 }
 ```
 
@@ -218,7 +224,10 @@ note - string
  "data":[
    {
      "technology":"fwa_licensed",
-     "note":null
+     "note":null,
+     "priceLevel":null,
+     "speedDown":null,
+     "speedUp":null
    }
  ]
 }
@@ -231,11 +240,17 @@ note - string
  "data":[
    {
      "technology":"xdsl",
-     "note":"note"
+     "note":"note",
+     "priceLevel":null,
+     "speedDown":null,
+     "speedUp":null
    },
    {
      "technology":"fwa_licensed",
-     "note":"Lorem ipsum, bla bla bla."
+     "note":"Lorem ipsum, bla bla bla.",
+     "priceLevel": "level_a",
+     "speedDown": 4096,
+     "speedUp": 512
    }
  ]
 }

@@ -5,6 +5,7 @@ namespace Tests\Cases;
 require __DIR__ . '/../bootstrap.php';
 
 use Ispa\Codi\Constant\Additional;
+use Ispa\Codi\Constant\PriceLevel;
 use Ispa\Codi\Constant\Technology;
 use Ispa\Codi\Entity\CodiInternetResponseEntity;
 use Ispa\Codi\Entity\CodiOpenAccessResponseEntity;
@@ -167,7 +168,17 @@ class EntityTest extends TestCase
 		$entity             = new CodiOpenAccessResponseEntity();
 		$entity->technology = Technology::WIFI;
 
-		Assert::equal('{"note":null,"technology":"wifi"}', json_encode($entity, JSON_UNESCAPED_SLASHES));
+		Assert::equal('{"note":null,"priceLevel":null,"speedUp":null,"speedDown":null,"technology":"wifi"}', json_encode($entity, JSON_UNESCAPED_SLASHES));
+	}
+
+
+	public function testCodiOpenAccessResponseEntityWithNote()
+	{
+		$entity             = new CodiOpenAccessResponseEntity();
+		$entity->technology = Technology::WIFI;
+		$entity->note       = "Text";
+
+		Assert::equal('{"note":"Text","priceLevel":null,"speedUp":null,"speedDown":null,"technology":"wifi"}', json_encode($entity, JSON_UNESCAPED_SLASHES));
 	}
 
 
@@ -176,8 +187,11 @@ class EntityTest extends TestCase
 		$entity             = new CodiOpenAccessResponseEntity();
 		$entity->technology = Technology::WIFI;
 		$entity->note       = "Text";
+		$entity->priceLevel = PriceLevel::A;
+		$entity->speedDown  = 4096;
+		$entity->speedUp    = 512;
 
-		Assert::equal('{"note":"Text","technology":"wifi"}', json_encode($entity, JSON_UNESCAPED_SLASHES));
+		Assert::equal('{"note":"Text","priceLevel":"level_a","speedUp":512,"speedDown":4096,"technology":"wifi"}', json_encode($entity, JSON_UNESCAPED_SLASHES));
 	}
 
 
