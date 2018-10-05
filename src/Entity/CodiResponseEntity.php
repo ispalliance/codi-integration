@@ -5,6 +5,9 @@ namespace Ispa\Codi\Entity;
 use Ispa\Codi\Constant\Technology;
 
 
+/**
+ * @property string $technology
+ */
 abstract class CodiResponseEntity extends BaseEntity
 {
 

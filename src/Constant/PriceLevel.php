@@ -12,9 +12,9 @@ final class PriceLevel
 		C = 'level_c';
 
 	private static $NAMES = [
-		self::A => "level_a",
-		self::B => "level_b",
-		self::C => "level_c",
+		self::A => "Price level A",
+		self::B => "Price level B",
+		self::C => "Price level C",
 	];
 
 

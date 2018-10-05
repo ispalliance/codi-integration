@@ -2,14 +2,14 @@
 
 namespace Ispa\Codi\Entity;
 
-
 use Ispa\Codi\Constant\PriceLevel;
 
+
 /**
- * @property $note
- * @property $priceLevel
- * @property $speedUp
- * @property $speedDown
+ * @property string|null $note
+ * @property string|null $priceLevel
+ * @property int|null $speedUp
+ * @property int|null $speedDown
  */
 class CodiOpenAccessResponseEntity extends CodiResponseEntity
 {

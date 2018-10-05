@@ -6,24 +6,24 @@ use Ispa\Codi\Constant\Additional;
 
 
 /**
- * @property $speedUp
- * @property $speedDown
- * @property $price
- * @property $additional
- * @property $webLink
- * @property $orderLink
- * @property $promoText
+ * @property FromToEntity $speedUp
+ * @property FromToEntity $speedDown
+ * @property FromToEntity $price
+ * @property array $additional
+ * @property string|null $webLink
+ * @property string|null $orderLink
+ * @property string|null $promoText
  */
 class CodiInternetResponseEntity extends CodiResponseEntity
 {
 
-	/** @var \Ispa\Codi\Entity\FromToEntity */
+	/** @var FromToEntity */
 	protected $speedUp;
 
-	/** @var \Ispa\Codi\Entity\FromToEntity */
+	/** @var FromToEntity */
 	protected $speedDown;
 
-	/** @var \Ispa\Codi\Entity\FromToEntity */
+	/** @var FromToEntity */
 	protected $price;
 
 	/** @var array */
